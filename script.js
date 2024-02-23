@@ -4,14 +4,25 @@
 
 function setup() {
   createCanvas(640, 240);
-  textFont("Arial");
+  textFont("Courier");
 }
+
+var phrase1 = "Nobody goes there any more ...";
+var phrase2 = "it's too crowded!";
+var phrase = ""; 
 
 function draw() {
   background(200);
-  textSize(16);
-  text("one small step for a man ...", 20, 60);
-  textSize(32);
-  text("one giant leap for mankind.", 20, 160);
+  if(mouseIsPressed){
+    textFont("Courier");
+    textSize(32);
+    phrase = phrase2;
+  } else {
+    textSize(18);
+    textFont("Times");
+    phrase = phrase1;
+  }
+  text(phrase, 20, 100);
+
 
 }
